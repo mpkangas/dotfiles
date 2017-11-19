@@ -94,11 +94,14 @@ Plug 'sheerun/vim-polyglot'
 " Commentin
 Plug 'tpope/vim-commentary'
 
+" Surroundings
+Plug 'tpope/vim-surround'
+
 " Initialize plugin system
 call plug#end()
 
 " Nerdtree
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 let NERDTreeMouseMode = 2
 let NERDTreeMinimalUI = 1
 map <C-n> :NERDTreeToggle<CR>
