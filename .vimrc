@@ -97,6 +97,9 @@ Plug 'tpope/vim-commentary'
 " Surroundings
 Plug 'tpope/vim-surround'
 
+" ALE (Asynchronous Lint Engine)
+Plug 'w0rp/ale'
+
 " Initialize plugin system
 call plug#end()
 
@@ -111,3 +114,5 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_format = '%s '
 let g:airline#extensions#tabline#buffer_nr_show = 1
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
