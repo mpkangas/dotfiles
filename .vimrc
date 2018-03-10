@@ -2,6 +2,11 @@ syntax on
 syntax enable
 set background=dark
 " let g:solarized_termcolors=256
+if has('gui_running')
+  let g:solarized_termcolors=256
+else
+  let g:solarized_termcolors=16
+endif
 colorscheme solarized
 
 set encoding=utf-8
@@ -100,14 +105,18 @@ Plug 'tpope/vim-surround'
 " ALE (Asynchronous Lint Engine)
 Plug 'w0rp/ale'
 
+" Ansible syntax highlight
+Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py', 'branch': 'v2' }
+
+
 " Initialize plugin system
 call plug#end()
 
 " Nerdtree
 let NERDTreeShowHidden = 1
 let NERDTreeMouseMode = 2
-let NERDTreeMinimalUI = 1
-map <C-n> :NERDTreeToggle<CR>
+let NERDTreeMinimalUI = 0
+map <C-n> :NERDTreeToggle %<CR>
 
 let g:airline_solarized_bg='dark'
 let g:airline_powerline_fonts = 1
