@@ -10,7 +10,7 @@ endif
 colorscheme solarized
 
 "Mode change delay
-set timeoutlen=1000 ttimeoutlen=0
+set timeoutlen=1000 ttimeoutlen=50
 
 set encoding=utf-8
 set relativenumber
@@ -21,12 +21,6 @@ set noshowmode " Don't show the current mode (airline.vim takes care of us)
 "Cursor change with modei
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-
-" optional reset cursor on start:
-augroup myCmds
-au!
-autocmd VimEnter * silent !echo -ne "\e[2 q"
-augroup END
 
 " Scrolling
 set scrolloff=3 " Start scrolling three lines before horizontal border of window.
